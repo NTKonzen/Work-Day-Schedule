@@ -21,12 +21,17 @@ body {
   border-width: 0;
   font-size: 1.4em;
   transition: .1s;
+  border-radius: 100%;
 }
 
 .arrowBtn:hover {
   transform: scale(1.1,1.1)
 }
 
+.arrowBtn:focus {
+  outline: none;
+  box-shadow: 0 0 2pt 3pt rgb(71, 195, 236);
+}
 
 
 textarea:hover, 
