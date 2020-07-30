@@ -39,7 +39,7 @@ button:focus {
   z-index: 1;
 }
 
-.past:focus {
+.past:focus{
   outline: 0px;
   box-shadow: 0 0 2pt 2pt rgb(0, 0, 0);
   z-index: 1;
