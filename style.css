@@ -16,6 +16,17 @@ body {
   border-bottom: 10px solid black;
 }
 
+.arrowBtn {
+  background-color: rgba(0,0,0,0);
+  border-width: 0;
+  font-size: 1.4em;
+  transition: .1s;
+}
+
+.arrowBtn:hover {
+  transform: scale(1.1,1.1)
+}
+
 
 
 textarea:hover, 

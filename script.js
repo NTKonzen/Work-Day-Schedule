@@ -1,6 +1,19 @@
 let descriptionArray = [];
 
+let days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
 $(document).ready(function () {
+
+    let date = new Date();
+    
+    console.log(`Today is ${days[date.getDay()]}`);
+    
+
+    $('#currentDay').text(`Today is ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`)
+
+    $('#dateDisplay').text(`${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`)
 
     $('.description').each(input => {
 
