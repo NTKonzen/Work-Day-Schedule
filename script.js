@@ -32,6 +32,8 @@ $(document).ready(function () {
             $('.description')[input].value = JSON.parse(localStorage.getItem('descriptions'))[input]
         }
 
+        descriptionArray[input] = JSON.parse(localStorage.getItem('descriptions'))[input];
+
     })
 
 
@@ -42,11 +44,9 @@ $(document).ready(function () {
         event.preventDefault();
         event.stopPropagation();
 
-        descriptionArray = []
-
-        $('.description').each(input => {
-            descriptionArray.push($('.description')[input].value)
-        })
+        let hour = event.currentTarget.getAttribute('data-hour')
+        
+        descriptionArray[hour-9] = $(`[data-hour=${hour}]`)[0].value
 
         localStorage.setItem('descriptions', '')
 
@@ -57,7 +57,6 @@ $(document).ready(function () {
 
     $('.description').keypress(function(event) {
         if (event.key === 'Enter') {
-            console.log(event.key);
             save(event);
         }
     })
