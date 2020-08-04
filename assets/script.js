@@ -55,6 +55,22 @@ $(document).ready(function () {
 
     $('.saveBtn').click(save);
 
+    $('#saveAllBtn').click(event => {
+        event.stopPropagation();
+        event.preventDefault();
+
+        console.log($(this));
+
+        descriptionArray = [];
+
+        $('.description').each(input => {
+            console.log($($('.description')[input]).val())
+            descriptionArray.push($($('.description')[input]).val());
+            localStorage.setItem('descriptions', JSON.stringify(descriptionArray))
+        })
+        
+    })
+
     $('.description').keypress(function(event) {
         if (event.key === 'Enter') {
             save(event);

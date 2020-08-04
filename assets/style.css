@@ -17,23 +17,6 @@ body {
   padding-bottom: 1vw;
 }
 
-.arrowBtn {
-  background-color: rgba(0, 0, 0, 0);
-  border-width: 0;
-  font-size: 1.4em;
-  transition: .1s;
-  border-radius: 100%;
-}
-
-.arrowBtn:hover {
-  transform: scale(1.1, 1.1)
-}
-
-.arrowBtn:focus {
-  outline: none;
-  box-shadow: 0 0 2pt 3pt rgb(71, 195, 236);
-}
-
 textarea:hover, input:hover, textarea:active, input:active, textarea:focus, button:active, button:hover, label:focus, .btn:active, .btn.active {
   outline: 0px;
   box-shadow: none !important;
@@ -119,6 +102,26 @@ button:focus {
 
 .saveBtn:hover {
   font-size: 1.3em;
+}
+
+#saveAllBtn {
+  background: lightblue;
+  color: rgb(66, 136, 160);
+  border-style: none;
+  height: 2.6em;
+  border-radius: 15px;
+  transition: .15s;
+}
+
+#saveAllBtn:hover {
+  transform: translateY(-.1em)
+}
+
+#saveAllBtn:focus {
+  transform: translateY(-.1em);
+  outline: 0px;
+  box-shadow: 0 0 1.5pt 2pt rgb(43, 179, 224);
+  z-index: 1;
 }
 
 @media screen and (max-width: 991px) {
