@@ -29,10 +29,12 @@ $(document).ready(function () {
         }
 
         if (localStorage.getItem('descriptions') !== null) {
-            $('.description')[input].value = JSON.parse(localStorage.getItem('descriptions'))[input]
+            $('.description')[input].value = JSON.parse(localStorage.getItem('descriptions'))[input];
+            descriptionArray[input] = JSON.parse(localStorage.getItem('descriptions'))[input];
+        } else {
+            descriptionArray[input] = ''
         }
 
-        descriptionArray[input] = JSON.parse(localStorage.getItem('descriptions'))[input];
 
     })
 
